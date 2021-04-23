@@ -1,15 +1,15 @@
-import { GetStaticProps } from 'next';
-import  Image  from "next/image";
 import  Link  from "next/link";
-
-import { format, parseISO } from "date-fns";
+import  Image  from "next/image";
 import  ptBR  from 'date-fns/locale/pt-BR';
 
+import { useContext } from 'react';
 import { api } from '../services/api';
+import { GetStaticProps } from 'next';
+import { format, parseISO } from "date-fns";
+import { PlayerContext } from '../contexts/PlayerContext';
 import { convertDuratinoToTimeString } from '../utils/convertDurationToTimeString';
 
 import  styles  from "./home.module.scss";
-
 
 type Episode = {
   id: string;
@@ -28,6 +28,8 @@ type HomeProps = {
 }
 
 export default function Home({lastestEpisodes, allEpisodes}: HomeProps) {
+  const { play } = useContext(PlayerContext);
+
   return (
     <div className={styles.homepage}>
       <section className={styles.lastestEpisodes}>
@@ -54,7 +56,7 @@ export default function Home({lastestEpisodes, allEpisodes}: HomeProps) {
                   <span>{episode.durationAsString}</span>
                 </div>
 
-                <button type="button">
+                <button type="button" onClick={() => play(episode)}>
                   <img src="/play-green.svg" alt="Tocar episódio"/>
                 </button>
               </li>
