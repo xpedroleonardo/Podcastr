@@ -1,7 +1,7 @@
 .playerContainer {
   width: 26.5rem;
   height: 100vh;
-  padding: 3rem 4rem;
+  padding: 2rem 4rem;
 
   background: var(--purple-500);
   color: var(--white);
@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 0.3rem;
   }
 
   strong{
@@ -40,14 +41,14 @@
 
   strong {
     display: block;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font: 600 1.25rem Lexend, sans-serif;
     line-height: 1.75rem;
   }
 
   span {
     display: block;
-    margin-top: 1rem;
+    margin: 0.5rem 0;
     opacity: 0.6;
     line-height: 1.5rem;
   }
@@ -97,7 +98,7 @@
   align-items: center;
   justify-content: center;
 
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   gap: 1.5rem;
 
   button {
@@ -113,6 +114,14 @@
 
     &:hover:not(:disabled) {
       filter: brightness(0.7)
+    }
+
+    &.isActive {
+      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+    }
+
+    &.isActive:hover {
+      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
     }
 
     &.playButton {
