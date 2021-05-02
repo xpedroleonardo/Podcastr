@@ -1,7 +1,5 @@
 <div align="center" >
   <img src="public/logo.svg" height="70" />
-  <br>
-  <br>
 
 ## Sua plataforma de escutar podcasts.    
 </div>
