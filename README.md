@@ -62,5 +62,4 @@ Deixe o terminal aberto após rodar os comandos para executar o projeto.
 ---
 
 ### 💻 Desenvolvido por [Pedro Leonardo](https://github.com/xpedroleonardo). 
-
 ### Gostou do projeto ? Dê uma estrela ⭐
